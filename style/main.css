@@ -3,7 +3,6 @@ body, html {
 	padding: 0;
 	overflow: hidden;
 	height: 100%;
-	cursor: none;
 }
 
 video {
@@ -15,4 +14,8 @@ video {
 	height: 100vh;
 	object-fit: cover;
 	z-index: -1;
+}
+
+.hide-cursor {
+	cursor: none;
 }
