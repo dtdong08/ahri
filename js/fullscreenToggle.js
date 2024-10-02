@@ -1,3 +1,5 @@
+let lastTouchTime = 0;
+
 function toggleFullscreen() {
 	if (!document.fullscreenElement) {
 		if (document.documentElement.requestFullscreen) {
@@ -32,3 +34,16 @@ document.addEventListener('keydown', (e) => {
 		toggleFullscreen();
 	}
 });
+
+// Event listener for double-tap on mobile
+document.addEventListener('touchstart', (e) => {
+	const currentTime = new Date().getTime();
+	const timeSinceLastTouch = currentTime - lastTouchTime;
+
+	if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) {
+		e.preventDefault(); // Prevent zooming
+		toggleFullscreen(); // Trigger fullscreen
+	}
+
+	lastTouchTime = currentTime;
+}, { passive: false });
