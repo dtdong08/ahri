@@ -22,7 +22,10 @@ function toggleFullscreen() {
 	}
 }
 
-document.addEventListener('dblclick', toggleFullscreen);
+document.addEventListener('dblclick', (e) => {
+	e.preventDefault();
+	toggleFullscreen();
+});
 
 document.addEventListener('keydown', (e) => {
 	if (e.key === 'f' || e.key === 'F') {
