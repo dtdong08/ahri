@@ -4,22 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>Ahri HOL Animation</title>
-	
 	<link rel="stylesheet" href="style/main.css">
-	
-	<script src="js/fullscreenToggle.js"></script>
-	<script src="js/cursorHide.js"></script>
 </head>
 
 <body>
 	<div class="video-wrapper">
-		<video autoplay muted loop>
+		<video id="backgroundVideo" autoplay muted loop>
 			<source src="media/ahri.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
-	</div>	
+	</div>
+
+	<script src="js/fullscreenToggle.js"></script>
+	<script src="js/playPauseToggle.js"></script>
+	<script src="js/cursorHide.js"></script>
 </body>
 
 </html>
