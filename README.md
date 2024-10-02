@@ -18,8 +18,11 @@ You can view the live demo of this project [here](https://dtdong08.github.io/ahr
 
 ## To-dos
 - ~~Handle the responsive design better~~
-- Support fullscreen experience on mobile browsers
+- ~~Support fullscreen experience on mobile browsers~~
 - Allow users to adjust the time delay before the cursor hides after inactivity
 - Allow users to set a YouTube video as the background
 - Let users add background music with a YouTube link
 - Integrate a music visualizer
+
+## Credit
+- The video is taken from [here](https://m.youtube.com/watch?v=MRJH95ltQAU), downloaded with y2mate
