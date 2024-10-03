@@ -1,10 +1,10 @@
-const video = document.getElementById('backgroundVideo');
+const audio = document.getElementById('backgroundMusic');
 
 function togglePlayPause() {
-	if (video.paused) {
-		video.play();
+	if (audio.paused) {
+		audio.play();
 	} else {
-		video.pause();
+		audio.pause();
 	}
 }
 
