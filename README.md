@@ -4,7 +4,7 @@ This project is a simple static website that continuously plays a fullscreen ani
 
 ## Features
 - Fullscreen animated video background
-- Background music (Nevada ft. Lantern) (does not start automatically)
+- Background music (Nevada ft. Lantern)
 - Auto-hiding cursor after 3 seconds of inactivity
 - Responsive design to fit different screen sizes
 
