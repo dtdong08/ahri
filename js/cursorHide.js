@@ -17,15 +17,15 @@ function setIdleTime() {
 	const newIdleTime = parseFloat(userInput);
 
 	if (Number.isNaN(newIdleTime)) {
-		alert('Please enter a valid number');
+		notify('error', 'Please enter a valid number');
 	} else if (newIdleTime < 1) {
-		alert('Idle time must be at least 1 second');
+		notify('error', 'Idle time must be at least 1 second');
 	} else {
 		IDLE_TIME = newIdleTime * 1000;
 		if (IDLE_TIME == 1) {
-			alert('Idle time set to 1 second');
+			notify('success', 'Idle time set to 1 second');
 		} else {
-			alert(`Idle time set to ${IDLE_TIME} seconds`);
+			notify('success', `Idle time set to ${IDLE_TIME / 1000} seconds`);
 		}
 	}
 }
