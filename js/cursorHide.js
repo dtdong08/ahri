@@ -1,5 +1,4 @@
-// the cursor will disappear after being idle for {IDLE_TIME} ms
-let IDLE_TIME = 3000;
+let IDLE_TIME = localStorage.getItem('IDLE_TIME') ? parseFloat(localStorage.getItem('IDLE_TIME')) : 3000;
 let timeout;
 
 function hideCursor() {
@@ -22,6 +21,7 @@ function setIdleTime() {
 		toastr.error('Idle time must be at least 1 second');
 	} else {
 		IDLE_TIME = newIdleTime * 1000;
+		localStorage.setItem('IDLE_TIME', IDLE_TIME);
 		if (IDLE_TIME == 1) {
 			toastr.success('Idle time set to 1 second');
 		} else {
