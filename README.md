@@ -9,7 +9,7 @@ Chilling Space is a simple static website featuring a continuous video of Ahri's
 - **Responsive design** for different screen sizes
 
 ## Demo
-Checkout the live demo [here](https://dtdong08.github.io/ahri)
+Checkout the live demo [here](https://dtdong08.github.io/chilling-space)
 
 ## Usage
 - Press the **f** key or **double-click** to toggle fullscreen mode
