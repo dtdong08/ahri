@@ -36,3 +36,6 @@ Checkout the live demo [here](https://dtdong08.github.io/chilling-space)
 ## Credit
 - The video is sourced from [here](https://www.youtube.com/watch?v=MRJH95ltQAU) and downloaded using [y2mate](https://www.y2mate.com)
 - The music is sourced from [here](https://www.youtube.com/watch?v=IxSJzB7rAes) and downloaded using [y2mate](https://www.y2mate.com)
+
+## License
+This project is under the GPL-3.0 license.
