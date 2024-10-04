@@ -1,6 +1,5 @@
 // the cursor will disappear after being idle for {IDLE_TIME} ms
-const IDLE_TIME = 3000;
-
+let IDLE_TIME = 3000;
 let timeout;
 
 function hideCursor() {
@@ -12,6 +11,30 @@ function showCursor() {
 	clearTimeout(timeout);
 	timeout = setTimeout(hideCursor, IDLE_TIME);
 }
+
+function setIdleTime() {
+	const userInput = prompt('Enter the idle time in seconds:', IDLE_TIME / 1000);
+	const newIdleTime = parseFloat(userInput);
+
+	if (Number.isNaN(newIdleTime)) {
+		alert('Please enter a valid number');
+	} else if (newIdleTime < 1) {
+		alert('Idle time must be at least 1 second');
+	} else {
+		IDLE_TIME = newIdleTime * 1000;
+		if (IDLE_TIME == 1) {
+			alert('Idle time set to 1 second');
+		} else {
+			alert(`Idle time set to ${IDLE_TIME} seconds`);
+		}
+	}
+}
+
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'd' || e.key === 'D') {
+		setIdleTime();
+	}
+});
 
 document.addEventListener('mousemove', showCursor);
 
