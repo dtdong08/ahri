@@ -9,10 +9,18 @@ function handleMusicUpload(event) {
 		const fileURL = URL.createObjectURL(file);
 		audioSource.src = fileURL;
 		backgroundMusic.load();
-		backgroundMusic.play();
-		toastr.success(`Now playing ${file.name}`);
+
+		backgroundMusic.oncanplaythrough = () => {
+			backgroundMusic.play();
+			toastr.success(`Now playing ${file.name.replace('.mp3','')}`);
+		};
+
+		backgroundMusic.onerror = () => {
+			toastr.error('Failed to load the audio file');
+		};
 	}
 }
+
 
 musicUpload.addEventListener('change', handleMusicUpload);
 
