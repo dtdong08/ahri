@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Chilling Space</title>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="video-wrapper">
+		<video id="backgroundVideo" autoplay muted loop>
+			<source src="ahri.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+
+	<audio id="backgroundMusic" loop>
+		<source id="audioSource" type="audio/mpeg">
+		Your browser does not support the audio tag.
+	</audio>
+
+	<input type="file" id="musicUpload" accept="audio/*" style="display: none;">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
