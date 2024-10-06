@@ -33,10 +33,21 @@ toastr.options = {
 }
 
 function togglePlayPause() {
-	if (backgroundMusic.paused) {
-		backgroundMusic.play();
+	if (!audioSource.src) {
+		toastr.warning('No audio file loaded. Please upload one');
+		return;
+	}
+
+	if (backgroundMusic.readyState >= 2) {
+		if (backgroundMusic.paused) {
+			backgroundMusic.play();
+			toastr.success('Music is now playing')
+		} else {
+			backgroundMusic.pause();
+			toastr.success('Music is paused')
+		}
 	} else {
-		backgroundMusic.pause();
+		toastr.error('Audio is not ready for playback yet');
 	}
 }
 
@@ -107,8 +118,15 @@ function handleMusicUpload(event) {
 		const fileURL = URL.createObjectURL(file);
 		audioSource.src = fileURL;
 		backgroundMusic.load();
-		backgroundMusic.play();
-		toastr.success(`Now playing ${file.name}`);
+
+		backgroundMusic.oncanplaythrough = () => {
+			backgroundMusic.play();
+			toastr.success(`Now playing ${file.name.replace('.mp3','')}`);
+		};
+
+		backgroundMusic.onerror = () => {
+			toastr.error('Failed to load the audio file');
+		};
 	}
 }
 
