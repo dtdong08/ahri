@@ -9,13 +9,8 @@ function handleMusicUpload(event) {
 		const fileURL = URL.createObjectURL(file);
 		audioSource.src = fileURL;
 		backgroundMusic.load();
-		backgroundMusic.play()
-			.then(() => {
-				toastr.success(`Now playing ${file.name}`);
-			})
-			.catch((e) => {
-				toastr.error(e)
-			});
+		backgroundMusic.play();
+		toastr.success(`Now playing ${file.name}`);
 	}
 }
 

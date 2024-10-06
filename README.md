@@ -23,6 +23,7 @@ Checkout the live demo [here](https://dtdong08.github.io/chilling-space)
 - Press the **D** key to adjust the delay time to hide the cursor
 - Press the **M** key to upload a file for background music
 - Press the **Spacebar** key or **click once** to pause/play the background music
+- Press the **>** key or **<** key to increase or decrease the volume of the background music
   
 > Sorry, but I now have no idea how to implement some features on no-keyboard devices
 
